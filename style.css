@@ -97,6 +97,7 @@
             background: linear-gradient( rgb(240 240 240 / 0%), rgb(255 255 255 / 0%) ), url(background.png);
             background-position: center;
             background-repeat: repeat;
+            background-image: url(background.png);
         }
         .showcase-container{
             padding: 20px;
