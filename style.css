@@ -30,6 +30,7 @@
         .nav-bar a:hover {
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
+        cursor:pointer;
         }
         .nav-bar a.active {
         background-color: #453b8c;
@@ -54,6 +55,7 @@
         .header a:hover {
         background-color: rgba(0, 0, 0, 0.5);
         color: white;
+        cursor:pointer;
         }
     
         .header-left{
