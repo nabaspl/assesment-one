@@ -199,6 +199,7 @@
 
         .related-content-desc {
             padding: 0 20px;
+            line-height: 1.5em;
         }
         .related-content-image {
             padding: 20px;
@@ -326,5 +327,11 @@
             .blog{
                 min-width: 300px;
                 min-height: 250px;
+            }
+            .showcase-area {
+                height: 300px;
+            }
+            .blank-section {
+                height: 150px;
             }
         }
