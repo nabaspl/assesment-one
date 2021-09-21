@@ -75,10 +75,16 @@
             justify-content: space-between;
             background-color: white;
             padding: 10px;
+            width: 250px;
         }
         input#search {
             border: none;
             outline: none;
+            width: 100%;
+        }
+        input#search::placeholder {
+            color: #40396b;
+            font-weight: bold;
         }
         .search-btn{
             border: none;
@@ -86,9 +92,13 @@
             cursor: pointer;
         }
     
-        img.logo {
+        img.logo{
         height: 40px;
-        }
+        } 
+        img.header-icons  {
+            height: 30px;
+            width: 30px;
+        } 
         .header-right i {
             border: 1px solid;
             border-radius: 50%;
@@ -97,24 +107,57 @@
         .quick-links span{
             margin-left: 8px;
         }
+        a.ask-q{
+            display: flex;
+            height: 34px;
+            justify-content: space-between;
+            width: 115px;
+            align-items: center;
+        }
         .quick-links a {
             border-right: 1px solid black;
         }
         .showcase-area {
             height: 350px;
-            background: linear-gradient( rgb(240 240 240 / 0%), rgb(255 255 255 / 0%) ), url(../images/background.png);
+            background: linear-gradient( rgb(240 240 240 / 0%), rgb(255 255 255 / 0%) ), url(../assets/images/background.png);
             background-position: center;
             background-repeat: repeat;
-            background-image: url(../images/background.png);
+            background-image: url(../assets/images/background.png);
         }
         .showcase-container{
             padding: 20px;
         }
-        .main-headings * {
+        .main-headings{
             padding-top: 10px;
             padding-left: 20px;
             color:white ;
+            line-height: 3em;
         }
+
+        .main-headings h4 {
+            font-weight: normal;
+            font-size: 1.2em;
+        }
+        .main-headings h2 {
+            font-size: 2.2em;
+        }
+
+        .head-hr{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
+        .div-hr{
+            width: 40%;
+            align-self: center;
+        }
+        .hr-2{
+            margin: 0 10px;
+            background-image: linear-gradient(to right, rgb(245 245 245), rgb(228 226 247), rgb(70 63 117));
+            border: 0;
+            height: 2px;
+        }
+        
         .scrolling-wrapper-flexbox {
             display: flex;
             flex-wrap: nowrap;
@@ -146,7 +189,7 @@
         }
         .blog{
             padding: 10px;
-            background-image: url(../images/building.JPG);
+            background-image: url(../assets/images/building.JPG);
             position: relative;
             min-height: 300px;
             margin: 20px;
@@ -162,6 +205,7 @@
         }
         p.info {
             color: #bebebe;
+            padding: 10px 0;
         }
         .blank-section{
             height: 200px;
@@ -199,7 +243,7 @@
 
         .related-content-desc {
             padding: 0 20px;
-            line-height: 1.5em;
+            line-height: 1em;
         }
         .related-content-image {
             padding: 20px;
@@ -274,17 +318,42 @@
         .hide{
             display: none;
         }
+
+        i.fa.fa-search {
+            font-weight: bold;
+            color: #655baf;
+        }
         
 
         @media only screen and (max-width: 768px) {
+            .header a{
+                padding: 10px 10px;
+            }
+            .main-headings{
+                line-height: 2em;
+                padding-left: 10px;
+            }
+            .head-hr h4 {
+                font-size: .8em !important;
+            }
+            .nav-bar{
+                position: absolute;
+                background-color: #5c52a1eb;
+            }
+            .scrolling-wrapper-flexbox{
+                justify-content: space-between;
+            }
             .first-content {
                 flex-direction: column;
+                margin-bottom: 10px;
             }
             .first-content-image {
                 width: auto;
+                padding: 0;
             }
             .first-content-desc {
                 width: auto;
+                padding: 10px;
             }
             article{
                 flex-direction: column;
@@ -294,9 +363,19 @@
             }
             section.main-content {
                 width: auto;
+                padding: 0;
+            }
+            .related-content-desc {
+                padding: 10px 10px;
+            }
+            .related-content-image {
+                padding: 0;
             }
             .show-on-mobile{
-                display: block !important;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
             .hide-on-mobile{
                 display: none !important;
@@ -309,16 +388,19 @@
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
-                font-size: .7em;
-            }
-            .blogs h3,h4 {
                 font-size: .9em;
+            }
+            .blogs h2,h3,h4 {
+                font-size: 1em;
+            }
+            .main-headings h2,h3,h4 {
+                font-size: 1em;
             }
             .blogs .row{
                 flex-direction: column;
             }
             .blog-content{
-                width: 55%;
+                width: 75%;
                 font-size: .7em;
             }
             span.badge{
@@ -327,6 +409,7 @@
             .blog{
                 min-width: 300px;
                 min-height: 250px;
+                margin: 10px 10px;
             }
             .showcase-area {
                 height: 300px;
@@ -334,4 +417,33 @@
             .blank-section {
                 height: 150px;
             }
+            .content-main-heading {
+                padding: 10px 20px;
+            }
+            .sponsored-content {
+                padding: 0;
+            }
+            .sponsored-content-head {
+                font-size: .8em;
+            }
+            .post{
+                margin-bottom: 0;
+            }
+
         }
+
+        @media screen and (max-width: 2560px) and (min-width: 2560px) {
+            article{
+                font-size: 1.8em;
+            }
+            section.showcase-area{
+                font-size: 1.8em;
+                height: 450px;
+            }
+            .blank-section {
+                height: 350px;
+            }
+            .blog{
+                min-height: 500px;
+            }
+          }

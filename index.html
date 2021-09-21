@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Beroe-live</title>  
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body>
@@ -16,23 +16,32 @@
                 </div>
                 <div class="header-right">
                     <div class="search-box">
-                        <input type="text" id="search" placeholder="search">
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                        <input type="text" id="search" placeholder="Search">
+                        <button class="search-btn">
+                            <i class="fa fa-search"></i>
+                        </button>
                     </div>
                     <div class="quick-links">
-                        <a><i class="fas fa-bell"></i></a>
+                        <a>
+                            <img class="header-icons" src="assets/images/notification-icon.png">
+                        </a>
                         <a><i class="fa fa-user"></i><span>Hi Jhone</span></a>
-                        <a><i class="fas fa-question"></i></i><span>Ask Before</span></a>
+                        <a class="ask-q">
+                            <img class="header-icons" src="assets/images/ask-beroe.png">
+                            <span>Ask Before</span>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="header show-on-mobile">
                 <div class="header-mobile">
-                    <a onclick="showMenu()"><i class="fa fa-bars"></i></a>
+                    <a onclick="showMenu()">
+                        <img class="header-icons" src="assets/images/menu-icon.png">
+                    </a>
                     <a><img src="assets/images/logo.png" alt="LOGO" class="logo"></a>
-                    <a><i class="fa fa-search"></i></a>
-                    <a><i class="fas fa-question"></i></a>   
+                    <a><img class="header-icons" src="assets/images/search-white.png"></a>
+                    <a><img class="header-icons" src="assets/images/ask-beroe.png"></a>   
                 </div>
             </div>
             <nav class="nav-bar" id="menu">
@@ -49,7 +58,12 @@
         <section class="showcase-area" id="showcase">
             <div class="showcase-container">
                 <div class="main-headings">
-                    <h4>INTERESTING READS</h4>
+                    <div class="head-hr">
+                        <h4>INTERESTING READS</h4>
+                        <div class="div-hr">
+                            <hr class="hr-2">
+                        </div>
+                    </div>
                     <h2>Commercial & Reminder Items, Technology, Category 2 </h2>
                     <h2>+ 5 more</h2>
                 </div>
